@@ -31,7 +31,7 @@ jobs:
       - name: Docker Image Build
         id: build-image
         run: |
-          docker build -t ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:2 .
+          docker build -t ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }} .
       - name: Docker image Push
         id: push-image
         run: |
